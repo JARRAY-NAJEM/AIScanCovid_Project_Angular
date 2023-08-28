@@ -1,0 +1,105 @@
+.example-form {
+  width: 100%;
+}
+mat-icon {
+  color: #0b26a0;
+}
+.example-full-width {
+  width: 100%;
+  padding: 0px 0px;
+}
+.example-full-width input {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  font-size: small;
+}
+.full-width {
+  width: 100%;
+}
+.full-width input {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  font-size: small;
+}
+
+@media (max-width: 600px) {
+  .example-form {
+    max-width: none;
+  }
+}
+.btn-log {
+  width: 25%;
+  padding: 25px;
+}
+.labInput {
+  font-size: large;
+  color: #0b26a0;
+  font-weight: bold;
+  // text-transform: uppercase;
+  padding: 10px 0 10px 0px;
+}
+$primary-color: #007bff;
+
+// Define styles for a file input
+input[type="file"] {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  font-size: small;
+  padding: 10;
+  padding: 1rem 0rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: white;
+  color: #0b26a0;
+
+  // Style the label for the file input
+  & + label {
+    display: inline-block;
+    padding: 1rem;
+    background-color: red;
+    color: white;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+    // Add a simple animation on hover
+    &:hover {
+      animation: pulse 0.5s infinite;
+    }
+  }
+
+  // Hide the default file input button
+  &::-webkit-file-upload-button {
+    display: none;
+  }
+
+  // Style the label on hover and focus
+  &:hover + label,
+  &:focus + label {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+// Define the pulse animation
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

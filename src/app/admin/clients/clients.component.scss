@@ -1,0 +1,39 @@
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+th {
+  font-weight: 500;
+}
+td,
+th {
+  text-align: center;
+  width: auto;
+}
+.demo-table {
+  width: 100%;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+.mat-column-result {
+  border-left: 1px solid #dadada;
+}
+.mat-column-id {
+  border-right: 1px solid #dadada;
+  text-align: center;
+}
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: #dadada;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}

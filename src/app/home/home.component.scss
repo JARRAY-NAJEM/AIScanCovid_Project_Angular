@@ -1,0 +1,138 @@
+.container {
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  background: radial-gradient(
+    circle at -8.9% 51.2%,
+    #4801ff 0%,
+
+    #407bff 5.9%,
+    #407bff 10.4%,
+    #407bff 10.4%,
+    #090979 18.5%,
+    #090979 28.5%,
+    #090979 38.5%,
+    #090979 40.5%,
+
+    #0b26a0 80%
+  );
+}
+.content {
+  flex-basis: calc(50% - 10%);
+  margin: 10px;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.box {
+  flex-basis: calc(50% - 10%);
+  margin: 10px;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: Verdana, sans-serif;
+}
+.title {
+  font-size: 36px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1;
+}
+.title1 {
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.intete {
+  font-size: 20px;
+  color: #fff;
+  line-height: 1.5;
+}
+.box-btn {
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.button-27 {
+  font-size: medium;
+  margin: 20px 20px 0 0px;
+  min-width: 50%;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  padding: 14px 30px;
+  border: 1px solid #304ffe;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  font-family: Verdana;
+
+  background: radial-gradient(
+    circle at -8.9% 51.2%,
+    #0b26a0 0%,
+
+    #0b26a0 5.9%,
+    #0b26a0 10.4%,
+    #0b26a0 12.4%,
+    #0b26a0 14.4%,
+    #0b26a0 16.4%,
+    #090979 18.5%,
+    #090979 28.5%,
+    #090979 38.5%,
+    #090979 40.5%,
+
+    #0b26a0 80%
+  );
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    box-shadow: 0px 5px 30px 0px rgba(48, 79, 254, 0.5);
+    background: radial-gradient(
+      circle at -8.9% 51.2%,
+      #0b26a0 0%,
+
+      #0b26a0 80%
+    );
+  }
+}
+.links {
+  display: flex;
+  justify-content: start;
+}
+/* Set first div to full width */
+@media only screen and (max-width: 600px) {
+  .box {
+    display: none;
+  }
+  .content {
+    flex-basis: 100%;
+  }
+  .title {
+    font-size: 25px;
+  }
+  .title1 {
+    font-size: 18px;
+  }
+  .intete {
+    font-size: 15px;
+  }
+  .links {
+    display: block;
+    justify-content: center;
+  }
+  .button-27 {
+    min-width: 100%;
+  }
+}

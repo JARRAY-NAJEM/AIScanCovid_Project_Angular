@@ -1,0 +1,153 @@
+<div
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  class="container"
+  fxLayoutAlign="center center"
+>
+  <mat-card>
+    <mat-card-content fxLayoutAlign="center center">
+      <form
+        [formGroup]="myFormlogin"
+        class="example-form"
+        (ngSubmit)="onSubmit()"
+      >
+        <div
+          class="form-outline"
+          fxLayout="column"
+          fxLayoutAlign="center center"
+        >
+          <a routerLink="/">
+            <img
+              class="example-full-width"
+              src="https://i.ibb.co/0Zp7GhL/lgAIS.png"
+              alt="lgAIS"
+              border="0"
+            />
+          </a>
+          <!-- <h1>LOGIN</h1> -->
+          <div style="height: 50px"></div>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>email</mat-label>
+            <input
+              type="email"
+              matInput
+              formControlName="email"
+              placeholder="email"
+            />
+            <mat-icon matSuffix>mail</mat-icon>
+
+            <mat-error *ngIf="email.hasError('required')"
+              ><b>Required</b></mat-error
+            >
+            <mat-error *ngIf="email.hasError('email')"
+              >email is not <b>valide</b></mat-error
+            >
+          </mat-form-field>
+        </div>
+        <div style="height: 5px"></div>
+
+        <div class="form-outline">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input
+              [type]="hide ? 'password' : 'text'"
+              matInput
+              formControlName="password"
+              placeholder="password"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+            <mat-error *ngIf="password.hasError('required')"
+              ><b>Required</b></mat-error
+            >
+
+            <!-- <mat-error *ngIf="myFormlogin.get('password').hasError('required')"><b>*
+              Veuillez saisir votre nouveau mot de passe</b></mat-error> -->
+          </mat-form-field>
+        </div>
+        <div style="height: 15px"></div>
+
+        <div>
+          <!--   -->
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            class="btn-log"
+            [disabled]="myFormlogin.invalid"
+          >
+            Authenticate</button
+          ><br />
+          <!-- <p>Login successful: {{ responseMessage }}</p>
+          <p>Login error: {{ errorMessage }}</p> -->
+          <div style="height: 10px"></div>
+          <a class="a">Forget Pasword ?</a>
+          <div style="height: 15px"></div>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="center center">
+          <button
+            mat-button
+            class="btn-log"
+            type="submit"
+            routerLink="/auth/register"
+          >
+            REGISTER
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+<!--
+<div class="container" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card
+    fxLayout="column"
+    class="example-card"
+    fxLayoutAlign="space-evenly center"
+  >
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form
+        fxLayout="column"
+        fxLayoutAlign="space-evenly center"
+        class="example-form"
+      >
+        <div class="example-container">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="pat@example.com" required />
+            <mat-icon matSuffix>mail</mat-icon>
+
+            <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error> -->
+<!-- </mat-form-field>
+        </div>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Login</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div> -->
