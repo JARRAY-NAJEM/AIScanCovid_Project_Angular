@@ -16,11 +16,12 @@ export class ApiDataService {
     return this.http.post(`${this.url}/login`, data, { headers }).toPromise();
   }
 
-  scanner(formData: FormData) {
-    return this.http.post(`${this.url}/predict`, formData);
+  scanner(formData: any) {
+    const headers = { 'content-type': 'application/json' };
+    return this.http.post(`${this.url}/scanner`, formData, { headers });
   }
 
   patient() {
-    return this.http.get(`${this.url}/patients`);
+    return this.http.get(`${this.url}/get`);
   }
 }
